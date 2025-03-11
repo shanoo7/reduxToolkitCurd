@@ -8,6 +8,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 
 import Forms from './components/Forms.jsx'
 import Read from './components/Read.jsx'
+import Update from './components/Update.jsx'
 
 
 const router = createBrowserRouter(
@@ -15,6 +16,8 @@ const router = createBrowserRouter(
     <Route path='/' element={<App/>}>
         <Route path='' element={<Read/>}/>
       <Route path='/form' element={<Forms/>}/>
+      <Route path='/update/:id' element={<Update/>}/>
+
     
     </Route>
 

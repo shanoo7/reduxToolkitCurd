@@ -25,7 +25,7 @@ export const createUser = createAsyncThunk("createUser", async (data, { rejectWi
 
 //READ 
 
-export const readUser = createAsyncThunk("readUser", async (rejectWithValue)=>{
+export const readUser = createAsyncThunk("readUser", async (args,{rejectWithValue})=>{
 try {
     const response = await fetch("https://67c847110acf98d07085c8d5.mockapi.io/curd")
     const result = await response.json()
@@ -55,7 +55,7 @@ try {
 
 export const updateUser = createAsyncThunk("updateUser",async(data,{rejectWithValue})=>{
     try {
-        const response = await fetch(`https://67c847110acf98d07085c8d5.mockapi.io/curd/${id}`,{
+        const response = await fetch(`https://67c847110acf98d07085c8d5.mockapi.io/curd/${data.id}`,{
             method:"PUT",
             headers:{
                 "Content-Type":"application/json"
@@ -125,6 +125,23 @@ const userDetailsSlice = createSlice({
                 
             })
             .addCase(deleteUser.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message;
+            })
+
+            .addCase(updateUser.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(updateUser.fulfilled, (state, action) => {
+                state.loading = false;
+                
+                    state.users = state.users.map((user)=>{
+                        user.id === action.payload.id ? action.payload : user
+                    })
+            
+                
+            })
+            .addCase(updateUser.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             })

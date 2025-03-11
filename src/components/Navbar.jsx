@@ -1,7 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const countUsers =  useSelector((state)=>state.app.users)
   return (
     <nav className="bg-gray-800 text-white py-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center px-6">
@@ -19,16 +21,11 @@ function Navbar() {
               to="/"
               className="hover:text-yellow-400 transition duration-300"
             >
-              Home
+              Home <span className="text-red-500 font-bold">{countUsers.length}</span>
             </Link>
           </li>
           <li>
-            <Link
-              to=""
-              className="hover:text-yellow-400 transition duration-300"
-            >
-              All Users
-            </Link>
+        
           </li>
           <li>
             <Link

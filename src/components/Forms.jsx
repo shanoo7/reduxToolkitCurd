@@ -21,7 +21,7 @@ const handleChange = (e)=>{
 const handleSubmit = (e)=>{
   e.preventDefault()
   dispatch(createUser(users))
-  navigate("/read")
+  navigate("/")
 }
 
   return (
