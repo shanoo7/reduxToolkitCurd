@@ -14,11 +14,11 @@ function CustomModal({ setShowModal, id }) {
                     <div className='flex justify-end'>
                         <button className='btn bg-red-500 h-8' onClick={() => setShowModal(false)}>close</button>
                     </div>
-                    <div className='flex flex-col font-bold text-xl gap-5 justify-center items-center'>
-                        <h5 className='text-2xl'>{singleData.name}</h5>
-                        <h1>{singleData.email}</h1>
-                        <h1>{singleData.age}</h1>
-                        <h1>{singleData.gender}</h1>
+                    <div className='flex flex-col font-bold gap-5 justify-center items-center'>
+                        <h5 className='text-xs mt-10 md:text-2xl'>{singleData.name}</h5>
+                        <h1 className='text-xs md:text-2xl'>{singleData.email}</h1>
+                        <h1 className='text-xs md:text-2xl'>{singleData.age}</h1>
+                        <h1 className='text-xs md:text-2xl'>{singleData.gender}</h1>
 
                     </div>
                 </div>
