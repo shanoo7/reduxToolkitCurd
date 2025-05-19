@@ -20,12 +20,12 @@ useEffect(()=>{
 
   return (
     <nav className="bg-gray-800 text-white py-4 shadow-lg fixed top-0 left-0 w-full z-10">
-      <div className="container mx-auto flex justify-between  px-4 lg:px-6">
+      <div className=" mx-auto flex justify-between items-center px-4 lg:px-6">
         
         {/* Left: Logo */}
         <Link to="/" className="text-sm md:text-2xl font-bold flex items-center gap-2">
-          <span className="text-yellow-400 text-3xl">❤️</span> {/* Icon */}
-          <span>RTK</span>
+          <span className="text-yellow-400 text-3xl">⚡</span> {/* Icon */}
+          <span>MyApp</span>
         </Link>
 
         {/* Mobile Menu Button */}
@@ -39,7 +39,7 @@ useEffect(()=>{
 
         {/* Navigation Links */}
         <ul
-          className={`lg:flex lg:gap-6 text-lg justify-center items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-gray-800 lg:bg-transparent px-4 lg:px-0 py-4 lg:py-0 transition-all duration-300 ease-in-out z-40 ${
+          className={`lg:flex lg:gap-6 text-lg absolute lg:static top-16 left-0 w-full lg:w-auto bg-gray-800 lg:bg-transparent px-4 lg:px-0 py-4 lg:py-0 transition-all duration-300 ease-in-out z-40 ${
             menuOpen ? "block" : "hidden"
           }`}
         >

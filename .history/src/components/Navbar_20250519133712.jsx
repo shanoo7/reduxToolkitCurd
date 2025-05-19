@@ -25,7 +25,7 @@ useEffect(()=>{
         {/* Left: Logo */}
         <Link to="/" className="text-sm md:text-2xl font-bold flex items-center gap-2">
           <span className="text-yellow-400 text-3xl">❤️</span> {/* Icon */}
-          <span>RTK</span>
+          <span>Redux Toolkit</span>
         </Link>
 
         {/* Mobile Menu Button */}

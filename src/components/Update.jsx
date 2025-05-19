@@ -19,7 +19,7 @@ function Update() {
 
         }
       },[id,users])
-      console.log(editUser)
+    //   console.log(editUser)
 
 
     const handleEdit = (e)=>{

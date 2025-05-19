@@ -15,7 +15,7 @@ const [users,setUsers] = useState({
 
 const handleChange = (e)=>{
     setUsers({...users,[e.target.name]:e.target.value})
-    console.log(users)
+    // console.log(users)
 }
 
 const handleSubmit = (e)=>{

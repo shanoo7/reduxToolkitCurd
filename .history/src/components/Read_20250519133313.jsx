@@ -73,7 +73,7 @@ function Read() {
             })
 
             .map((ele, index) => (
-              <div key={ele?.id || index} className="bg-gray-100 p-6 rounded border flex flex-col items-center text-center">
+              <div key={ele?.id || index} className="bg-white p-6 rounded-xl border flex flex-col items-center text-center">
                 <h2 className="text-xl font-bold text-gray-800">{ele?.name}</h2>
                 <p className="text-gray-600">{ele?.email}</p>
                 <p className="text-gray-500 mb-4">{ele?.gender}</p>
